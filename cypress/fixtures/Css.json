@@ -1,0 +1,14 @@
+{
+    "SignUp": "Create an Account",
+    "FirstName": "input[name='firstname']",
+    "LasttName": "input[name='lastname']",
+    "Email": "input[name='email']",
+    "Password": "input[id='password']",
+    "Confirm_Password": "input[name='password_confirmation']",
+    "ClickonSubmit": "button[title='Create an Account']",
+    "VerifyAccount": "div.box-content > p",
+    "SignInEmail": "input[id='email']",
+    "SignInPassword": "input[name='login[password]']",
+    "SignInButton": "button[id='send2']",
+    "VerifySign":".panel > :nth-child(2)"
+}
