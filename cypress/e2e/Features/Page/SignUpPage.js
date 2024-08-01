@@ -25,19 +25,19 @@ class SignUp {
         cy.contains(elementName).click()
     }
     enterName() {
-        cy.get(Css.FirstName).type(this.FirstName)
+        cy.get(Css.FirstName).clear().type(this.FirstName)
         cy.wait(2000)
-        cy.get(Css.LasttName).type(this.LastName)
+        cy.get(Css.LasttName).clear().type(this.LastName)
         cy.wait(2000)
     }
 
     enterEmailPassword() {
-        let uniqueEmail =this.Email.substring(0, 2) +Math.floor(Math.random() *999)
-        cy.get(Css.Email).type(uniqueEmail +this.Email)
+        let uniqueEmail = this.Email.substring(0, 2) + Math.floor(Math.random() * 999)
+        cy.get(Css.Email).clear().type(uniqueEmail + this.Email)
         cy.wait(2000)
-        cy.get(Css.Password).type(this.Password)
+        cy.get(Css.Password).clear().type(this.Password)
         cy.wait(2000)
-        cy.get(Css.Confirm_Password).type(this.Confirmpassword)
+        cy.get(Css.Confirm_Password).clear().type(this.Confirmpassword)
         cy.wait(2000)
     }
 
@@ -47,21 +47,22 @@ class SignUp {
     }
     enterNameValidation(FirstName, LastName) {
         if (FirstName && LastName != "") {
-            cy.get(Css.FirstName).type(FirstName)
+            cy.get(Css.FirstName).clear().type(FirstName)
             cy.wait(2000)
-            cy.get(Css.LasttName).type(LastName)
+            cy.get(Css.LasttName).clear().type(LastName)
         }
     }
     enterEmailPasswordsValidation(Email, Password, ConfirmPasword) {
         if (Email && Password && ConfirmPasword != "") {
-            cy.get(Css.Email).type(Email)
+            cy.get(Css.Email).clear().type(Email)
             cy.wait(2000)
-            cy.get(Css.Password).type(Password)
+            cy.get(Css.Password).clear().type(Password)
             cy.wait(2000)
-            cy.get(Css.Confirm_Password).type(ConfirmPasword)
+            cy.get(Css.Confirm_Password).clear().type(ConfirmPasword)
         }
     }
     ValidationMessage(Message) {
+        cy.wait(2000)
         cy.get('body').should('contain.text', Message)
     }
     VerifyAccountCreated() {

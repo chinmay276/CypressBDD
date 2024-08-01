@@ -17,11 +17,11 @@ class SignIn {
         })
     }
     SignInEmail(Email) {
-        cy.get(Css.SignInEmail).type(Email)
+        cy.get(Css.SignInEmail).clear().type(Email)
         this.Email = Email
     }
     SignInPassword(Password) {
-        cy.get(Css.SignInPassword).type(Password)
+        cy.get(Css.SignInPassword).clear().type(Password)
         this.Password = Password
     }
     SignIn() {
