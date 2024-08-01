@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "name": "http://Cypress.config('api_URL')+endpoint",
+            "request": "launch",
+            "url": "http://Cypress.config('api_URL')+endpoint"
+        }
+    ]
+}
